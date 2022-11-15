@@ -1,6 +1,7 @@
 import { join } from "path";
 import AutoLoad, { AutoloadPluginOptions } from "@fastify/autoload";
 import { FastifyPluginAsync } from "fastify";
+import cors from "@fastify/cors";
 
 export type AppOptions = {
   // Place your custom options for app below here.
@@ -20,6 +21,11 @@ const app: FastifyPluginAsync<AppOptions> = async (
   void fastify.register(AutoLoad, {
     dir: join(__dirname, "plugins"),
     options: opts,
+  });
+
+  //enable cors on all routes
+  void fastify.register(cors, {
+    origin: "*",
   });
 
   // This loads all plugins defined in routes
