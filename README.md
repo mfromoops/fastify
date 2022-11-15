@@ -14,3 +14,4 @@ This example starts a [Fastify](https://www.fastify.io/) server.
 - Install dependencies `npm install`
 - Connect to your Railway project `railway link`
 - Start the development server `railway run npm run dev`
+  postgresql://postgres:eNUKr7637r4qKOPfhfge@containers-us-west-122.railway.app:6531/railway
