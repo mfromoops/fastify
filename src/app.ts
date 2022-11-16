@@ -26,6 +26,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
   //enable cors on all routes
   void fastify.register(cors, {
     origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
   });
 
   // This loads all plugins defined in routes
